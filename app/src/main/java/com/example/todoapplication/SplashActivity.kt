@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
 
         val i = Intent(this@SplashActivity, home_layout::class.java)
         CoroutineScope(Dispatchers.Main).launch {
-            delay(1000)
+            delay(1500)
             startActivity(i)
             finish()
         }

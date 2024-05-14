@@ -66,7 +66,9 @@ class RecyclerItemTouchHelper(private val adapter: ToDoAdapter) :
         } else {
             icon = ContextCompat.getDrawable(adapter.getContext(), R.drawable.delete)
             background = ColorDrawable(Color.RED)
+
         }
+
         val iconMargin = itemView.height - icon!!.intrinsicHeight / 2
         val iconTop = itemView.top + (itemView.height - icon.intrinsicHeight)
         val iconBottom = iconTop + icon.intrinsicHeight

@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity(), DialogCloseListner {
     override fun handleDialogClose(dialog: DialogInterface?) {
         taskList = db.allTasks.toMutableList()
         taskList.reverse()
+        // Update UI with the retrieved tasks - Coroutine
         tasksAdapter.setTasks(taskList)
         tasksAdapter.notifyDataSetChanged()
     }

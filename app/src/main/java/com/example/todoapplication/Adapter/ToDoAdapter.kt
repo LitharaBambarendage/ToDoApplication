@@ -27,6 +27,7 @@ class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainAct
         db.openDatabase()
         val item = todoList!![position]
         holder.task.text = item.task
+        holder.task.textSize = 18f
         holder.task.isChecked = toBoolean(item.status.toInt())
         holder.task.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
